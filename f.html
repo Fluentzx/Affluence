@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fluent Zx – Ultra Landing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      background: #f1f1f1;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #282a35;
+      color: #fff;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      animation: slideDown 1s ease;
+    }
+    .navbar h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    .navbar ul li a {
+      position: relative;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .navbar ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background: #04aa6d;
+      transition: width 0.3s;
+    }
+    .navbar ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(270deg, #282a35, #3a3d52, #2b2f45);
+      background-size: 600% 600%;
+      color: #fff;
+      animation: gradientMove 15s ease infinite;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      animation: fadeIn 1.5s ease;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease;
+    }
+    .search-box {
+      display: inline-flex;
+      border-radius: 50px;
+      overflow: hidden;
+      animation: fadeInUp 2.5s ease;
+    }
+    .search-box input {
+      width: 60vw;
+      max-width: 450px;
+      padding: 14px;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      transition: 0.3s;
+    }
+    .search-box input:focus {
+      box-shadow: 0 0 12px #04aa6d;
+    }
+    .search-box button {
+      padding: 14px 25px;
+      border: none;
+      background: #04aa6d;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .search-box button:hover {
+      background: #059862;
+      transform: scale(1.05);
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 80px 80px;
+      background: #fff;
+      margin: 20px auto;
+      border-radius: 15px;
+      max-width: 1200px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section:nth-child(even) {
+      background: #f9f9f9;
+    }
+    .section-text {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+    .section-text h3 {
+      font-size: 2.2rem;
+      color: #282a35;
+    }
+    .section-text p {
+      font-size: 1.05rem;
+      margin: 15px 0;
+      color: #444;
+    }
+    .section-text a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #04aa6d;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .section-text a:hover {
+      background: #059862;
+      box-shadow: 0 5px 15px rgba(4,170,109,0.6);
+      transform: translateY(-3px);
+    }
+    .section-img {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .section-img img {
+      max-width: 100%;
+      border-radius: 12px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .section-img img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #282a35;
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-top: 40px;
+      animation: fadeIn 3s ease;
+    }
+    footer a {
+      color: #04aa6d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes slideDown {
+      from {transform: translateY(-100%);}
+      to {transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <h1>Fluent Zx</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Tutorials</a></li>
+      <li><a href="#">Examples</a></li>
+      <li><a href="#">Tracks</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h2>Welcome to Fluent Zx Learning</h2>
+    <p>Learn. Practice. Create. Discover music & coding tutorials just like W3Schools — but more alive 🎶</p>
+    <div class="search-box">
+      <input type="text" placeholder="Search tracks, tutorials or examples...">
+      <button>Search</button>
+    </div>
+  </div>
+
+  <!-- SECTIONS -->
+  <div class="section">
+    <div class="section-text">
+      <h3>🎧 Music Tracks</h3>
+      <p>Explore Fluent Zx’s latest Phonk drops like <em>MXZI</em>, Vem Vem, and Montagem Mandela. Stream, vibe, or download instantly.</p>
+      <a href="song.html">Explore Tracks</a>
+    </div>
+    <div class="section-img">
+      <img src="pc.jpg" alt="Music">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-text">
+      <h3>📘 Tutorials</h3>
+      <p>Step into the world of production. Learn how to create Phonk beats, mix, and master. Easy guides for beginners & pros.</p>
+      <a href="#">Start Learning</a>
+    </div>
+    <div class="section-img">
+      <img src="tutorial.jpg" alt="Tutorial">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-text">
+      <h3>💻 Examples</h3>
+      <p>See how tracks are built, explore templates, and get inspired. Fluent Zx shares real project files & insights.</p>
+      <a href="#">View Examples</a>
+    </div>
+    <div class="section-img">
+      <img src="examples.jpg" alt="Examples">
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Fluent Zx. All Rights Reserved. | <a href="#">Back to top</a>
+  </footer>
+
+  <!-- Scroll Reveal Script -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    window.addEventListener('scroll', () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+        if (boxTop < trigger) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

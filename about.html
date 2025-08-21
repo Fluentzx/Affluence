@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MXZI – Official Release</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Custom styles for gradients, animations, and specific elements not easily covered by Tailwind */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #0a0a0a; /* Deep dark background */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      overflow-x: hidden;
+      color: #f0f0f0; /* Off-white text for high contrast */
+    }
+
+    /* Fade-in animation for initial load */
+    body, header, section, footer {
+      animation: fadeIn 1.2s ease-in-out forwards;
+      opacity: 0; /* Start invisible */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Subtle animation for elements on scroll */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom audio player styling for a darker theme */
+    .custom-audio-player::-webkit-media-controls-panel {
+      background-color: #262626; /* Darker control panel */
+      border-radius: 8px;
+    }
+    .custom-audio-player::-webkit-media-controls-play-button,
+    .custom-audio-player::-webkit-media-controls-volume-slider,
+    .custom-audio-player::-webkit-media-controls-current-time-display,
+    .custom-audio-player::-webkit-media-controls-time-remaining-display {
+      color: #a3a3a3; /* Light gray icons/text */
+    }
+    .custom-audio-player::-webkit-media-controls-timeline {
+      background-color: #404040; /* Darker timeline background */
+      border-radius: 4px;
+    }
+    .custom-audio-player::-webkit-media-controls-playhead {
+      background-color: #facc15; /* Yellow playhead */
+    }
+
+    /* Smooth scroll for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="selection:bg-yellow-500 selection:text-black">
+  <!-- Navbar -->
+  <nav class="w-full bg-transparent fixed top-0 z-50 py-5 md:py-6 px-4 md:px-12 flex justify-between items-center transition-all duration-500">
+    <div class="flex items-center space-x-4">
+      <h1 class="font-extrabold text-3xl md:text-4xl text-yellow-400 tracking-wider font-montserrat">FLUENT ZX</h1>
+    </div>
+    <ul class="hidden md:flex items-center space-x-8">
+      <li><a href="sub.html" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Premium</a></li>
+      <li><a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Support</a></li>
+      <li><a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Download</a></li>
+      <li><a href="#about" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">About</a></li>
+      <li><a href="#tracks" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Tracks</a></li>
+      <li><a href="#downloader" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Downloader</a></li>
+    </ul>
+</head>
+<body class="selection:bg-yellow-500 selection:text-black">
+  <!-- Navbar -->
+
+  <!-- Background Animated Circles -->
+  <div class="bg-animation">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <header>
+    <h1>MXZI</h1>
+    <h2>By Fluentzx</h2>
+    <p>Released: 5th August 2025</p>
+    <img src="pc.jpg" alt="Album Cover" class="album-cover">
+  </header>
+
+  <section class="player-container">
+    <h2>🎧 Listen Now</h2>
+    <audio controls>
+      <source src="mxzi.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+    <a href="mxzi.mp3" download class="download-btn">⬇️ Download Song</a>
+  </section>
+
+  <footer>
+    ⚠️ Parental Advisory – Amazing Content <br/>
+    © 2025 Affluence. All Rights Reserved.
+    <ul class="hidden md:flex items-center space-x-8">
+      <li><a href="sub.html" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Premium</a></li>
+      <li><a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Support</a></li>
+      <li><a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Download</a></li>
+      <li><a href="#about" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">About</a></li>
+      <li><a href="#tracks" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Tracks</a></li>
+      <li><a href="#downloader" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Downloader</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

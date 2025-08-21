@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluent Zx – Official Site</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts - Montserrat for headings, Open Sans for body for a sleek, modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Custom styles for gradients, animations, and specific elements not easily covered by Tailwind */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #0a0a0a; /* Deep dark background */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      overflow-x: hidden;
+      color: #f0f0f0; /* Off-white text for high contrast */
+    }
+
+    /* Fade-in animation for initial load */
+    body, header, section, footer {
+      animation: fadeIn 1.2s ease-in-out forwards;
+      opacity: 0; /* Start invisible */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Subtle animation for elements on scroll */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom audio player styling for a darker theme */
+    .custom-audio-player::-webkit-media-controls-panel {
+      background-color: #262626; /* Darker control panel */
+      border-radius: 8px;
+    }
+    .custom-audio-player::-webkit-media-controls-play-button,
+    .custom-audio-player::-webkit-media-controls-volume-slider,
+    .custom-audio-player::-webkit-media-controls-current-time-display,
+    .custom-audio-player::-webkit-media-controls-time-remaining-display {
+      color: #a3a3a3; /* Light gray icons/text */
+    }
+    .custom-audio-player::-webkit-media-controls-timeline {
+      background-color: #404040; /* Darker timeline background */
+      border-radius: 4px;
+    }
+    .custom-audio-player::-webkit-media-controls-playhead {
+      background-color: #facc15; /* Yellow playhead */
+    }
+
+    /* Smooth scroll for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="selection:bg-yellow-500 selection:text-black">
+  <!-- Navbar -->
+  <nav class="w-full bg-transparent fixed top-0 z-50 py-5 md:py-6 px-4 md:px-12 flex justify-between items-center transition-all duration-500">
+    <div class="flex items-center space-x-4">
+      <h1 class="font-extrabold text-3xl md:text-4xl text-yellow-400 tracking-wider font-montserrat">FLUENT ZX</h1>
+    </div>
+    <ul class="hidden md:flex items-center space-x-8">
+      <li><a href="sub.html" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Premium</a></li>
+      <li><a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Support</a></li>
+      <li><a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Download</a></li>
+      <li><a href="#about" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">About</a></li>
+      <li><a href="#tracks" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Tracks</a></li>
+      <li><a href="#downloader" class="text-white hover:text-yellow-400 transition-colors duration-300 text-lg font-medium font-montserrat uppercase tracking-wide">Downloader</a></li>
+    </ul>
+    <!-- Mobile Menu Button (Hamburger) -->
+    <button class="md:hidden text-white focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative w-full py-40 md:py-56 text-center overflow-hidden flex flex-col items-center justify-center min-h-screen-75">
+    <h1 class="text-8xl md:text-9xl font-extrabold text-white leading-tight drop-shadow-lg font-montserrat animate-fade-in-up">
+      MXZI
+    </h1>
+    <p class="text-3xl md:text-4xl text-gray-300 font-light mt-4 font-open-sans animate-fade-in-up delay-100">By Fluentzx</p>
+    <p class="text-xl md:text-2xl text-gray-400 font-medium mt-2 font-open-sans animate-fade-in-up delay-200">Released: 5th August 2025</p>
+    <img src="pc.jpg" alt="Album Cover" class="album-cover w-72 md:w-96 h-72 md:h-96 mx-auto mt-16 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500 animate-fade-in-up delay-300" onerror="this.onerror=null; this.src='https://placehold.co/600x600/facc15/0a0a0a?text=ALBUM+COVER+PLACEHOLDER';">
+
+    <div class="player-container mt-20 px-4 w-full max-w-2xl scroll-reveal">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-8 font-montserrat drop-shadow">🎧 Listen Now</h2>
+      <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl shadow-2xl border border-gray-700">
+        <div class="mb-8">
+          <p class="text-gray-300 text-xl mb-4 font-open-sans">MXZI - Main Track</p>
+          <audio controls class="w-full rounded-xl outline-none focus:outline-none custom-audio-player">
+            <source src="mxzi.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#tracks" class="download-btn mt-20 inline-block bg-yellow-500 text-black font-bold py-5 px-14 rounded-full shadow-lg hover:shadow-xl transform hover:translate-y-[-8px] transition-all duration-300 text-2xl md:text-3xl font-montserrat uppercase tracking-wide focus:outline-none focus:ring-4 focus:ring-yellow-300 scroll-reveal">
+      Explore All Tracks
+    </a>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features w-full py-28 px-4 md:px-8 bg-gray-900 shadow-inner mt-24 max-w-7xl mx-auto border-t border-b border-gray-800 scroll-reveal" id="about">
+    <h2 class="text-5xl md:text-6xl font-extrabold text-center text-white mb-16 font-montserrat drop-shadow-md">Why Fluent Zx?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <div class="feature-card bg-gray-800 p-10 rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center border border-gray-700 cursor-pointer">
+        <span class="text-7xl text-yellow-400 mb-6">🎶</span> <!-- Using emoji for simple, bold icon -->
+        <h3 class="text-3xl font-semibold text-white mb-4 font-montserrat">Unlimited Listening</h3>
+        <p class="text-gray-300 leading-relaxed text-lg font-open-sans">Enjoy nonstop playback of Fluent Zx tracks with no interruptions, anytime, anywhere.</p>
+      </div>
+      <div class="feature-card bg-gray-800 p-10 rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center border border-gray-700 cursor-pointer">
+        <span class="text-7xl text-yellow-400 mb-6">✨</span>
+        <h3 class="text-3xl font-semibold text-white mb-4 font-montserrat">Exclusive Phonk</h3>
+        <p class="text-gray-300 leading-relaxed text-lg font-open-sans">Get first access to unreleased drops and underground beats, ahead of the curve.</p>
+      </div>
+      <div class="feature-card bg-gray-800 p-10 rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center border border-gray-700 cursor-pointer">
+        <span class="text-7xl text-yellow-400 mb-6">📱</span>
+        <h3 class="text-3xl font-semibold text-white mb-4 font-montserrat">On Any Device</h3>
+        <p class="text-gray-300 leading-relaxed text-lg font-open-sans">Stream Fluent Zx music seamlessly on your phone, laptop, or gaming console.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Sections -->
+  <section class="w-full py-28 px-4 md:px-12 mt-24 max-w-7xl mx-auto" id="tracks">
+    <h2 class="text-5xl md:text-6xl font-extrabold text-center text-white mb-20 font-montserrat drop-shadow-md scroll-reveal">Explore Fluent Zx</h2>
+
+    <div class="section-block bg-gray-900 p-12 rounded-3xl shadow-2xl mb-20 flex flex-col md:flex-row items-center justify-between border border-gray-800 scroll-reveal">
+      <div class="section-text md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pr-12">
+        <h3 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-6 font-montserrat">🎶 Latest Tracks</h3>
+        <p class="text-gray-300 leading-relaxed text-xl mb-10 font-open-sans">Dive into the freshest Phonk drops like MXZI, Vem Vem, and Montagem Mandela. Stream, vibe, or download instantly.</p>
+        <a href="#" class="inline-block bg-yellow-500 text-black font-semibold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-yellow-300 text-xl font-montserrat uppercase">Explore Tracks</a>
+      </div>
+      <div class="section-img md:w-1/2 flex justify-center">
+        <img src="https://placehold.co/500x320/facc15/0a0a0a?text=LATEST+TRACKS" alt="Music Tracks" class="w-full max-w-lg rounded-2xl shadow-xl border border-gray-700" onerror="this.onerror=null; this.src='https://placehold.co/500x320/facc15/0a0a0a?text=LATEST+TRACKS+PLACEHOLDER';">
+      </div>
+    </div>
+
+    <div class="section-block bg-gray-900 p-12 rounded-3xl shadow-2xl mb-20 flex flex-col md:flex-row-reverse items-center justify-between border border-gray-800 scroll-reveal">
+      <div class="section-text md:w-1/2 text-center md:text-right mb-10 md:mb-0 md:pl-12">
+        <h3 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-6 font-montserrat">📘 Tutorials</h3>
+        <p class="text-gray-300 leading-relaxed text-xl mb-10 font-open-sans">Step into the world of production. Learn how to create Phonk beats, mix, and master. Easy guides for beginners & pros.</p>
+        <a href="#" class="inline-block bg-yellow-500 text-black font-semibold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-yellow-300 text-xl font-montserrat uppercase">Start Learning</a>
+      </div>
+      <div class="section-img md:w-1/2 flex justify-center">
+        <img src="https://placehold.co/500x320/facc15/0a0a0a?text=TUTORIALS" alt="Tutorial" class="w-full max-w-lg rounded-2xl shadow-xl border border-gray-700" onerror="this.onerror=null; this.src='https://placehold.co/500x320/facc15/0a0a0a?text=TUTORIALS+PLACEHOLDER';">
+      </div>
+    </div>
+
+    <div class="section-block bg-gray-900 p-12 rounded-3xl shadow-2xl flex flex-col md:flex-row items-center justify-between border border-gray-800 scroll-reveal">
+      <div class="section-text md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pr-12">
+        <h3 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-6 font-montserrat">💻 Examples</h3>
+        <p class="text-gray-300 leading-relaxed text-xl mb-10 font-open-sans">See how tracks are built, explore templates, and get inspired. Fluent Zx shares real project files & insights.</p>
+        <a href="#" class="inline-block bg-yellow-500 text-black font-semibold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-yellow-300 text-xl font-montserrat uppercase">View Examples</a>
+      </div>
+      <div class="section-img md:w-1/2 flex justify-center">
+        <img src="https://placehold.co/500x320/facc15/0a0a0a?text=EXAMPLES" alt="Examples" class="w-full max-w-lg rounded-2xl shadow-xl border border-gray-700" onerror="this.onerror=null; this.src='https://placehold.co/500x320/facc15/0a0a0a?text=EXAMPLES+PLACEHOLDER';">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Download Section -->
+  <section class="cta w-full py-28 px-4 md:px-12 bg-gray-900 shadow-inner mt-24 max-w-7xl mx-auto border-t border-b border-gray-800 text-center scroll-reveal">
+    <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-12 font-montserrat drop-shadow-md">Get the Fluent Zx App</h2>
+    <p class="text-xl md:text-2xl text-gray-300 mb-14 leading-relaxed font-open-sans">Download now and unlock exclusive features, offline listening, and premium content wherever you go.</p>
+    <a href="#" class="inline-block bg-yellow-500 text-black font-bold py-5 px-16 rounded-full shadow-lg hover:shadow-xl transform hover:translate-y-[-8px] transition-all duration-300 text-2xl md:text-3xl font-montserrat uppercase tracking-wide focus:outline-none focus:ring-4 focus:ring-yellow-300">
+      Download Now
+    </a>
+  </section>
+
+  <!-- Download Tool Section -->
+  <section class="download-tool w-full py-28 px-4 md:px-12 bg-gray-900 shadow-inner mt-24 max-w-7xl mx-auto border-t border-b border-gray-800 text-center scroll-reveal" id="downloader">
+    <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-12 font-montserrat drop-shadow-md">Download Files Directly</h2>
+    <p class="text-xl md:text-2xl text-gray-300 mb-14 leading-relaxed font-open-sans">Enter the URL of the file you wish to download and click the button.</p>
+    <div class="flex flex-col items-center max-w-xl mx-auto">
+      <input type="url" id="downloadUrl" placeholder="Enter file URL (e.g., https://example.com/file.pdf)" class="w-full p-4 rounded-xl bg-gray-800 text-white text-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 mb-8 font-open-sans">
+      <button id="downloadButton" class="inline-block bg-yellow-500 text-black font-bold py-5 px-16 rounded-full shadow-lg hover:shadow-xl transform hover:translate-y-[-8px] transition-all duration-300 text-2xl md:text-3xl font-montserrat uppercase tracking-wide focus:outline-none focus:ring-4 focus:ring-yellow-300">
+        Download File
+      </button>
+    </div>
+    <div id="messageBox" class="mt-8 text-yellow-400 text-lg font-medium font-open-sans hidden"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full py-12 text-center text-gray-500 text-lg mt-24">
+    <p class="font-open-sans">&copy; 2025 Fluent Zx. All Rights Reserved.</p>
+    <nav class="mt-6">
+      <a href="#" class="mx-4 text-gray-400 hover:text-yellow-400 transition-colors duration-300 font-medium font-open-sans">Privacy Policy</a>
+      <a href="#" class="mx-4 text-gray-400 hover:text-yellow-400 transition-colors duration-300 font-medium font-open-sans">Terms of Service</a>
+      <a href="#" class="mx-4 text-gray-400 hover:text-yellow-400 transition-colors duration-300 font-medium font-open-sans">Contact</a>
+    </nav>
+  </footer>
+
+  <script>
+    // JavaScript for scroll-reveal effect
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      scrollRevealElements.forEach(el => observer.observe(el));
+
+      // Download functionality
+      const downloadButton = document.getElementById('downloadButton');
+      const downloadUrlInput = document.getElementById('downloadUrl');
+      const messageBox = document.getElementById('messageBox');
+
+      downloadButton.addEventListener('click', () => {
+        const url = downloadUrlInput.value.trim();
+        if (url) {
+          // Create a temporary anchor element
+          const a = document.createElement('a');
+          a.href = url;
+          // Set the download attribute to suggest a filename.
+          // This will prompt the browser to download the file directly.
+          // If the URL does not point to a downloadable resource,
+          // it might open in a new tab or navigate to the URL instead.
+          a.download = url.substring(url.lastIndexOf('/') + 1) || 'downloaded_file';
+          document.body.appendChild(a); // Append to body to make it clickable
+          a.click(); // Programmatically click the link
+          document.body.removeChild(a); // Remove the link after clicking
+          messageBox.textContent = 'Download initiated. Please check your browser downloads.';
+          messageBox.classList.remove('hidden');
+          messageBox.style.color = '#facc15'; // Yellow for success
+        } else {
+          messageBox.textContent = 'Please enter a valid URL to download.';
+          messageBox.classList.remove('hidden');
+          messageBox.style.color = '#ef4444'; // Red for error
+        }
+      });
+    });
+  </script>
+</body>
+</html>

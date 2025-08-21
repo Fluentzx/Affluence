@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fluent Zx – Spotify Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #121212;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #000;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h1 {
+      color: #1DB954;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #1DB954;
+    }
+
+    /* HERO */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      background: linear-gradient(135deg, #1DB954, #121212 60%);
+    }
+    .hero h2 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 40px;
+      background: #1DB954;
+      border-radius: 30px;
+      font-weight: bold;
+      color: #111;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #1ed760;
+      transform: scale(1.05);
+    }
+
+    /* FEATURES */
+    .features {
+      padding: 80px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+    .feature {
+      background: #181818;
+      padding: 30px;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+    .feature h3 {
+      color: #1DB954;
+      margin-bottom: 15px;
+    }
+    .feature p {
+      color: #bbb;
+    }
+
+    /* CTA DOWNLOAD */
+    .cta {
+      background: #1DB954;
+      color: #111;
+      text-align: center;
+      padding: 70px 20px;
+    }
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .cta a {
+      background: #111;
+      color: #fff;
+      border-radius: 25px;
+      padding: 14px 35px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta a:hover {
+      background: #222;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 25px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #1DB954;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <h1>Fluent Zx</h1>
+    <ul>
+      <li><a href="#">Premium</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Download</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="song.html">Tracks</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>MXZI – Feel the Phonk</h2>
+    <p>Stream Fluent Zx’s latest release and vibe with exclusive tracks everywhere.</p>
+    <a href="song.html" class="btn">Listen Now</a>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature">
+      <h3>🎧 Unlimited Listening</h3>
+      <p>Enjoy nonstop playback of Fluent Zx tracks with no interruptions.</p>
+    </div>
+    <div class="feature">
+      <h3>🔥 Exclusive Phonk</h3>
+      <p>Get access to unreleased drops and underground beats first.</p>
+    </div>
+    <div class="feature">
+      <h3>📱 On Any Device</h3>
+      <p>Stream Fluent Zx music anywhere—phone, laptop, or PlayStation.</p>
+    </div>
+  </section>
+
+  <!-- CTA DOWNLOAD -->
+  <section class="cta">
+    <h2>Get the Fluent Zx App</h2>
+    <p>Download now and take your beats everywhere you go.</p>
+    <a href="#">Download App</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Fluent Zx. Inspired by Spotify. | <a href="#">Back to top</a>
+  </footer>
+</body>
+</html>

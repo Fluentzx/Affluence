@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscription – Fluent Zx</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #00f2fe;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ddd;
+      font-weight: 500;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00f2fe;
+      text-shadow: 0 0 12px #00f2fe;
+    }
+
+    /* SUBSCRIPTION SECTION */
+    .subscriptions {
+      padding: 120px 20px 60px;
+      text-align: center;
+    }
+
+    .subscriptions h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      background: linear-gradient(90deg, #ff4dff, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .plan {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .plan:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(255,77,255,0.6);
+    }
+
+    .plan h3 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #00f2fe;
+    }
+
+    .plan p {
+      margin: 10px 0;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .price {
+      font-size: 2rem;
+      margin: 20px 0;
+      font-weight: bold;
+      color: #ff4dff;
+    }
+
+    .subscribe-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #111;
+      background: linear-gradient(90deg, #00f2fe, #4facfe, #ff4dff);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+    }
+
+    .subscribe-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 30px rgba(255,77,255,0.8);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.5);
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>Fluent Zx</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="song.html">Tracks</a></li>
+      <li><a href="sub.html">Premium</a></li>
+     <li><a href="sub.html">Download</a></li>
+    <li><a href="sub.html">Support</a></li>
+    <li><a href="sub.html">Downloader</a></li>
+    </ul>
+  </nav>
+
+  <!-- Subscription Section -->
+  <section class="subscriptions">
+    <h2>Choose Your Plan</h2>
+    <div class="plans">
+      
+      <!-- Lite Plan -->
+      <div class="plan">
+        <h3>Lite</h3>
+        <p>✔️ Access to free tracks</p>
+        <p>✔️ Limited downloads</p>
+        <p>❌ No exclusive content</p>
+        <div class="price">$4.99 / mo</div>
+        <a href="#" class="subscribe-btn">Subscribe Lite</a>
+      </div>
+
+      <!-- Classic Plan -->
+      <div class="plan">
+        <h3>Classic</h3>
+        <p>✔️ All Lite features</p>
+        <p>✔️ Unlimited downloads</p>
+        <p>✔️ Exclusive monthly drops</p>
+        <div class="price">$19.99 / mo</div>
+        <a href="#" class="subscribe-btn">Subscribe Classic</a>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="plan">
+        <h3>Pro</h3>
+        <p>✔️ All Classic features</p>
+        <p>✔️ Behind-the-scenes content</p>
+        <p>✔️ VIP early access</p>
+        <div class="price">$99.99 / mo</div>
+        <a href="#" class="subscribe-btn">Subscribe Pro</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Fluent Zx. All Rights Reserved.
+  </footer>
+</body>
+</html>
